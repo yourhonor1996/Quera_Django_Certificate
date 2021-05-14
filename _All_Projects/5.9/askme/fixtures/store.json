@@ -1,0 +1,154 @@
+[
+  {
+    "model": "askme.brand",
+    "pk": 1,
+    "fields": {
+      "name": "Xiaomi",
+      "nationality": "China"
+    }
+  },
+  {
+    "model": "askme.brand",
+    "pk": 2,
+    "fields": {
+      "name": "Huawei",
+      "nationality": "China"
+    }
+  },
+  {
+    "model": "askme.brand",
+    "pk": 3,
+    "fields": {
+      "name": "Samsung",
+      "nationality": "Korea"
+    }
+  },
+  {
+    "model": "askme.brand",
+    "pk": 4,
+    "fields": {
+      "name": "Apple",
+      "nationality": "United States"
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 1,
+    "fields": {
+      "brand": 3,
+      "model": "A80",
+      "price": 6000000,
+      "color": "White",
+      "display_size": 6,
+      "is_available": true
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 2,
+    "fields": {
+      "brand": 3,
+      "model": "A70",
+      "price": 4500000,
+      "color": "Blue",
+      "display_size": 6,
+      "is_available": true
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 3,
+    "fields": {
+      "brand": 1,
+      "model": "9T Pro",
+      "price": 7500000,
+      "color": "Red",
+      "display_size": 6,
+      "is_available": true
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 4,
+    "fields": {
+      "brand": 1,
+      "model": "Note 6",
+      "price": 3100000,
+      "color": "Black",
+      "display_size": 4,
+      "is_available": true
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 5,
+    "fields": {
+      "brand": 4,
+      "model": "iphone 8",
+      "price": 5300000,
+      "color": "White",
+      "display_size": 7,
+      "is_available": true
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 6,
+    "fields": {
+      "brand": 4,
+      "model": "iphone 10",
+      "price": 18000000,
+      "color": "Black",
+      "display_size": 6,
+      "is_available": true
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 7,
+    "fields": {
+      "brand": 2,
+      "model": "P40",
+      "price": 12000000,
+      "color": "Black",
+      "display_size": 6,
+      "is_available": true
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 8,
+    "fields": {
+      "brand": 2,
+      "model": "P10 Pro",
+      "price": 3060000,
+      "color": "Gray",
+      "display_size": 5,
+      "is_available": true
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 9,
+    "fields": {
+      "brand": 2,
+      "model": "P90 Pro",
+      "price": 53060000,
+      "color": "Ocean",
+      "display_size": 42,
+      "is_available": false
+    }
+  },
+  {
+    "model": "askme.mobile",
+    "pk": 10,
+    "fields": {
+      "brand": 4,
+      "model": "iphone XIII",
+      "price": 83123431,
+      "color": "Black",
+      "display_size": 10,
+      "is_available": false
+    }
+  }
+]
