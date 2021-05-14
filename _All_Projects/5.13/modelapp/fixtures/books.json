@@ -1,0 +1,47 @@
+[
+  {
+    "model": "modelapp.book",
+    "pk": 1,
+    "fields": {
+      "name": "The Marked Window",
+      "rate": 3,
+      "free": false
+    }
+  },
+  {
+    "model": "modelapp.book",
+    "pk": 2,
+    "fields": {
+      "name": "Death of the Laughing Viper",
+      "rate": 5,
+      "free": true
+    }
+  },
+  {
+    "model": "modelapp.book",
+    "pk": 3,
+    "fields": {
+      "name": "Made of Dead",
+      "rate": 2,
+      "free": false
+    }
+  },
+  {
+    "model": "modelapp.book",
+    "pk": 4,
+    "fields": {
+      "name": "The Best in the Glass",
+      "rate": 4,
+      "free": true
+    }
+  },
+  {
+    "model": "modelapp.book",
+    "pk": 5,
+    "fields": {
+      "name": "There's a Crowd",
+      "rate": 1,
+      "free": false
+    }
+  }
+]
