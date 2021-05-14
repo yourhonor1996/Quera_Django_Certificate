@@ -12,7 +12,7 @@ class Book(models.Model):
     free = models.BooleanField(default=True)
 
     # CONFIG YOUR MODEL MANAGER HERE
-    objects = BookManager
+    objects = BookManager()
     
     def __str__(self):
         return self.name
