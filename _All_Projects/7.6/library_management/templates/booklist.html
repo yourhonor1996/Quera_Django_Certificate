@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'library_management/booklist.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booklist</title>
+</head>
+<body>
+<h1>There are {{books_count}} books in the library.</h1>
+<h3>Books</h3>
+<div>
+{% for book in books %}
+    <p>{{ book.title }}</p>
+{% endfor %}
+</div>
+</body>
+</html>
