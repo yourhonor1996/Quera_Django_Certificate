@@ -1,0 +1,26 @@
+[
+  {
+    "model": "library_management.book",
+    "pk": 1,
+    "fields": {
+      "title": "Once Upon a Time in Iran",
+      "author": "SAliB"
+    }
+  },
+  {
+    "model": "library_management.book",
+    "pk": 2,
+    "fields": {
+      "title": "Yesterday",
+      "author": "SAliB"
+    }
+  },
+  {
+    "model": "library_management.book",
+    "pk": 3,
+    "fields": {
+      "title": "White Nights",
+      "author": "SAliB"
+    }
+  }
+]
