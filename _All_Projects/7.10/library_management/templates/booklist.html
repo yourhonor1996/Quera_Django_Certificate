@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Books</h3>
+<div>
+{% for book in books %}
+    {% if book.available %}
+        <p>{{ book.author }} wrote {{ book.title }}.</p>
+    {% endif %}
+{% endfor %}
+</div>
+{% endblock %}
