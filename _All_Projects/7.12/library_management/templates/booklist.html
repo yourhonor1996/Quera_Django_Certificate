@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booklist</title>
+    <style type="text/css">
+        td {
+            padding: 0 40px;
+        }
+    </style>
+</head>
+<body>
+
+<table class="ui fixed table">
+    <thead>
+    <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Publication Date</th>
+        <th scope="col">Text</th>
+    </tr>
+    </thead>
+    <tbody>
+        <!-- TODO -->
+        {% for book in books %}
+        <tr>
+            <td>{{book.title|title}}</td>
+            <td>{{book.author|upper}}</td>
+            <td>{{book.publication_date|date:"D d M Y"}}</td>
+            <td>{{book.text|truncatewords:15|lower|capfirst}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

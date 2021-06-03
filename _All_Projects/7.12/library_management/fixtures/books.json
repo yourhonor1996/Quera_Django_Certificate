@@ -1,0 +1,42 @@
+[
+  {
+    "model": "library_management.book",
+    "pk": 1,
+    "fields": {
+      "title": "eND OF OUR dAyS1",
+      "author": "PollARD berrier",
+      "publication_date": "2020-5-4",
+      "text": "hOLding mE DOWN I CAN'T Believe I am DroWninG sOMEHOW FaLL to MY KNEES I CAN'T Believe WHAT I see"
+    }
+  },
+  {
+    "model": "library_management.book",
+    "pk": 1,
+    "fields": {
+      "title": "eND OF OUR dAyS2",
+      "author": "PollARD berrier",
+      "publication_date": "2020-5-4",
+      "text": "hOLding mE DOWN I CAN'T Believe I am DroWninG sOMEHOW FaLL to MY KNEES I CAN'T Believe WHAT I see"
+    }
+  },
+  {
+    "model": "library_management.book",
+    "pk": 1,
+    "fields": {
+      "title": "eND OF OUR dAyS3",
+      "author": "PollARD berrier",
+      "publication_date": "2020-5-4",
+      "text": "hOLding mE DOWN I CAN'T Believe I am DroWninG sOMEHOW FaLL to MY KNEES I CAN'T Believe WHAT I see"
+    }
+  },
+  {
+    "model": "library_management.book",
+    "pk": 2,
+    "fields": {
+      "title": "collapse collide",
+      "author": "darius KEELER",
+      "publication_date": "2014-12-31",
+      "text": "tOO LATE TheY HATE TOO LATE ThEy HaTE yOU've JADED THEy've faded from YOUR Heart And You DIDN'T"
+    }
+  }
+]
