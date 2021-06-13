@@ -1,0 +1,87 @@
+[
+  {
+    "model": "sixinapp.musician",
+    "pk": 1,
+    "fields": {
+      "name": "SAliB ",
+      "instrument": "Hang Drum"
+    }
+  },
+  {
+    "model": "sixinapp.musician",
+    "pk": 2,
+    "fields": {
+      "name": "Ali ",
+      "instrument": "Piano"
+    }
+  },
+  {
+    "model": "sixinapp.musician",
+    "pk": 3,
+    "fields": {
+      "name": "Sajjad ",
+      "instrument": "Setar"
+    }
+  },
+  {
+    "model": "sixinapp.musician",
+    "pk": 4,
+    "fields": {
+      "name": "Farhad ",
+      "instrument": "Guitar"
+    }
+  },
+  {
+    "model": "sixinapp.musician",
+    "pk": 5,
+    "fields": {
+      "name": "Saeed ",
+      "instrument": "Guitar"
+    }
+  },
+  {
+    "model": "sixinapp.album",
+    "pk": 1,
+    "fields": {
+      "name": "Parande ",
+      "artist": 1,
+      "num_stars": 3
+    }
+  },
+  {
+    "model": "sixinapp.album",
+    "pk": 2,
+    "fields": {
+      "name": "Game ",
+      "artist": 1,
+      "num_stars": 5
+    }
+  },
+  {
+    "model": "sixinapp.album",
+    "pk": 3,
+    "fields": {
+      "name": "Friend ",
+      "artist": 3,
+      "num_stars": 4
+    }
+  },
+  {
+    "model": "sixinapp.album",
+    "pk": 4,
+    "fields": {
+      "name": "King ",
+      "artist": 2,
+      "num_stars": 2
+    }
+  },
+  {
+    "model": "sixinapp.album",
+    "pk": 5,
+    "fields": {
+      "name": "Wait ",
+      "artist": 4,
+      "num_stars": 1
+    }
+  }
+]

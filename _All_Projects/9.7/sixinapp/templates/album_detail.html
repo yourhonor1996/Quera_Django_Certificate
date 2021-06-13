@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ album.name|capfirst }}</title>
+</head>
+<body>
+<div>
+    <p>Album : {{ album.name|capfirst }}</p>
+    <p>Artist : {{ album.artist.name|capfirst }}</p>
+    <p>Score : {{ album.num_stars }}</p>
+</div>
+</body>
+</html>
