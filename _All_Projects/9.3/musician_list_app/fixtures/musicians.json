@@ -1,0 +1,42 @@
+[
+  {
+    "model": "musician_list_app.musician",
+    "pk": 1,
+    "fields": {
+      "name": "SAliB ",
+      "instrument": "Hang Drum"
+    }
+  },
+  {
+    "model": "musician_list_app.musician",
+    "pk": 2,
+    "fields": {
+      "name": "Ali ",
+      "instrument": "Piano"
+    }
+  },
+  {
+    "model": "musician_list_app.musician",
+    "pk": 3,
+    "fields": {
+      "name": "Sajjad ",
+      "instrument": "Setar"
+    }
+  },
+  {
+    "model": "musician_list_app.musician",
+    "pk": 4,
+    "fields": {
+      "name": "Farhad ",
+      "instrument": "Guitar"
+    }
+  },
+  {
+    "model": "musician_list_app.musician",
+    "pk": 5,
+    "fields": {
+      "name": "Saeed ",
+      "instrument": "Guitar"
+    }
+  }
+]
