@@ -1,6 +1,6 @@
 from django.db import models
+from django.db.models.query_utils import Q
 from accounts.models import User
-
 class Benefactor(models.Model):
     experience_choices = (
         (0, 'low'),
@@ -12,7 +12,6 @@ class Benefactor(models.Model):
     user = models.OneToOneField(User, on_delete= models.CASCADE)
     experience = models.SmallIntegerField(choices= experience_choices, default= 0)
     free_time_per_week = models.PositiveSmallIntegerField(default= 0)
-    
 
 
 class Charity(models.Model):
@@ -22,7 +21,25 @@ class Charity(models.Model):
     reg_number = models.CharField(max_length= 10)
 
 
+class TaskManager(models.Manager):
+    def related_tasks_to_charity(self, user:User):
+        queryset = self.filter(charity__user__id= user.id)
+        return queryset
+    
+    def related_tasks_to_benefactor(self, user:User):
+        queryset = self.filter(assigned_benefactor__user__id= user.id)
+        return queryset
+    
+    def all_related_tasks_to_user(self, user:User):
+        return self.filter(
+            Q(state= 'P') |
+            Q(charity__user__id= user.id) |
+            Q(assigned_benefactor__user__id= user.id))
+
+
 class Task(models.Model):
+    objects = TaskManager()
+    
     gender_choices = (
         ('M', 'Male'),
         ('F', 'Female'),
