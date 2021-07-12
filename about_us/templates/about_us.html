@@ -4,7 +4,11 @@
     <h2 class="text-center my-5">نیکوکاران و اعضای خیریه‌ها</h2>
     <div class="container">
         <div class="d-flex flex-wrap justify-content-around">
-            <div>نام کاربری افرادی که عضو هستند</div>
+            <div>
+            {% for user in users %}
+                <p>{{user.get_full_name}}</p>
+            {% endfor %}
+                </div>
         </div>
     </div>
 {% endblock %}
