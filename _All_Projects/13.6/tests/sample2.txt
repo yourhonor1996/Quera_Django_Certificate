@@ -1,0 +1,5 @@
+from django.http import HttpResponseNotFound
+
+
+def books(request, genre):
+    return HttpResponseNotFound('<h1>Page not found</h1>')
