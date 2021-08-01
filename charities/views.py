@@ -12,12 +12,39 @@ from charities.serializers import (
 
 
 class BenefactorRegistration(APIView):
-    pass
+    permission_classes = (IsAuthenticated, )
+    
+    def post(self, request):
+        data = request.data
+        benefactor_serializer = BenefactorSerializer(
+            data= {'experience': data['experience'],
+                   'free_time_per_week':data['free_time_per_week']})
+        if benefactor_serializer.is_valid():
+            benefactor_serializer.save(user= request.user)
+            return Response(
+                data={
+                    'message': f'Congratulations <<{request.user.username}>>You have been successfully registered as a benefactor!'
+                    },
+                status= status.HTTP_200_OK)
+        return Response(data= {'errors':benefactor_serializer.errors})
 
 
 class CharityRegistration(APIView):
-    pass
+    permission_classes = (IsAuthenticated, )
 
+    def post(self, request):
+        data = request.data 
+        charity_serializer = CharitySerializer(
+            data= {'name': data['name'],
+                   'reg_number':data['reg_number']})
+        if charity_serializer.is_valid():
+            charity_serializer.save(user= request.user)
+            return Response(
+                data={
+                    'message': f'Congratulations <<{request.user.username}>>You have been successfully registered as a charity!'
+                    },
+                status= status.HTTP_200_OK)
+        return Response(data= {'errors':charity_serializer.errors})
 
 class Tasks(generics.ListCreateAPIView):
     serializer_class = TaskSerializer
