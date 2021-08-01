@@ -8,9 +8,6 @@ from rest_framework.views import APIView
 from .serializers import UserSerializer
 
 
-from rest_framework.authtoken.views import ObtainAuthToken
-from rest_framework.authtoken.models import Token
-
 
 class LogoutAPIView(APIView):
     permission_classes = (IsAuthenticated,)

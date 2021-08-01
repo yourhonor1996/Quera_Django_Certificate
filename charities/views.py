@@ -1,3 +1,4 @@
+from inspect import getouterframes
 from rest_framework import status, generics
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, SAFE_METHODS
@@ -9,7 +10,7 @@ from charities.models import Task
 from charities.serializers import (
     TaskSerializer, CharitySerializer, BenefactorSerializer
 )
-
+from django.shortcuts import get_object_or_404
 
 class BenefactorRegistration(APIView):
     permission_classes = (IsAuthenticated, )
@@ -26,7 +27,7 @@ class BenefactorRegistration(APIView):
                     'message': f'Congratulations <<{request.user.username}>>You have been successfully registered as a benefactor!'
                     },
                 status= status.HTTP_200_OK)
-        return Response(data= {'errors':benefactor_serializer.errors})
+        return Response(data= {'errors':benefactor_serializer.errors}, status= status.HTTP_400_BAD_REQUEST)
 
 
 class CharityRegistration(APIView):
@@ -41,10 +42,10 @@ class CharityRegistration(APIView):
             charity_serializer.save(user= request.user)
             return Response(
                 data={
-                    'message': f'Congratulations <<{request.user.username}>>You have been successfully registered as a charity!'
+                    'message': f'Congratulations <<{request.user.username}>> You have been successfully registered as a charity!'
                     },
                 status= status.HTTP_200_OK)
-        return Response(data= {'errors':charity_serializer.errors})
+        return Response(data= {'errors':charity_serializer.errors}, status= status.HTTP_400_BAD_REQUEST)
 
 class Tasks(generics.ListCreateAPIView):
     serializer_class = TaskSerializer
@@ -86,8 +87,22 @@ class Tasks(generics.ListCreateAPIView):
 
 
 class TaskRequest(APIView):
-    pass
-
+    permission_classes = (IsBenefactor, )
+    
+    def get(self, request, task_id):
+        task = get_object_or_404(Task, id= task_id)
+        if task.state != 'P':
+            return Response(data= {'detail': 'This task is not pending.'}, status= status.HTTP_404_NOT_FOUND)
+        task.state = 'W'
+        # request.user.
+        if request.user.is_benefactor:
+            task.assign_to_benefactor(request.user.benefactor)
+        elif request.user.is_charity:
+            task.charity = request.user.charity
+            
+        task.save()
+        
+        return Response(data={'detail': 'Request sent.'}, status= status.HTTP_200_OK)
 
 class TaskResponse(APIView):
     pass
