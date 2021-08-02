@@ -29,4 +29,4 @@ This repository contains all the work and assignments I've completed in order to
 
 #### The certification can be found at** [THIS LINK](https://quera.ir/certificate/UTXWmnf9/ "THIS LINK")**
 
-![](add file here)
+![](https://github.com/yourhonor1996/Quera_Django_Certificate/blob/master/Certificate%20Image.jpg)
